@@ -1,8 +1,9 @@
 /*
- * AML Theme — Industrial Navy + Orange
- * Primary: Deep Navy (#002366)
- * Accent: Industrial Orange (#FF6B00)
- * Vibe: Bold, industrial, logistics
+ * AML Theme — Blue Palette from automarketlgc.com
+ * Primary: Mid Blue (#1A6FBF)
+ * Dark Navy: (#0F2237)
+ * Accent: Light Blue (#2A86C9)
+ * Vibe: Professional, clean, trustworthy
  *
  * This is the single theme file. Colors use HEX values.
  * Light mode: :root selectors. Dark mode: .dark selectors.
@@ -11,83 +12,83 @@
 
 :root {
   --radius: 0px;
-  /* Clean white surface with deep navy primary and orange accent */
+  /* White surface with blue primary and blue accent */
   --background: #ffffff;
-  --foreground: #002366;
+  --foreground: #0F2237;
   --card: #ffffff;
-  --card-foreground: #002366;
+  --card-foreground: #0F2237;
   --popover: #ffffff;
-  --popover-foreground: #002366;
-  --primary: #002366;
+  --popover-foreground: #0F2237;
+  --primary: #1A6FBF;
   --primary-foreground: #ffffff;
-  --secondary: #F4F7FA;
-  --secondary-foreground: #002366;
-  --muted: #F4F7FA;
-  --muted-foreground: #B0BEC5;
-  --accent: #FF6B00;
+  --secondary: #F7FAFE;
+  --secondary-foreground: #0F2237;
+  --muted: #F7FAFE;
+  --muted-foreground: #5A7FA0;
+  --accent: #2A86C9;
   --accent-foreground: #ffffff;
-  --destructive: #e7000b;
-  --border: #B0BEC5;
-  --input: #B0BEC5;
-  --ring: #002366;
+  --destructive: #E23367;
+  --border: #D0E4F5;
+  --input: #D0E4F5;
+  --ring: #1A6FBF;
   --success: #008339;
   --success-foreground: #ffffff;
-  --warning: #FF6B00;
+  --warning: #E23367;
   --warning-foreground: #ffffff;
-  --info: #0079bf;
+  --info: #2A86C9;
   --info-foreground: #ffffff;
-  --chart-1: #002366;
-  --chart-2: #FF6B00;
-  --chart-3: #0079bf;
+  --chart-1: #1A6FBF;
+  --chart-2: #2A86C9;
+  --chart-3: #5A7FA0;
   --chart-4: #008339;
-  --chart-5: #B0BEC5;
-  --sidebar: #F4F7FA;
-  --sidebar-foreground: #002366;
-  --sidebar-primary: #002366;
+  --chart-5: #D0E4F5;
+  --sidebar: #F7FAFE;
+  --sidebar-foreground: #0F2237;
+  --sidebar-primary: #1A6FBF;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #FF6B00;
+  --sidebar-accent: #2A86C9;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #B0BEC5;
-  --sidebar-ring: #002366;
+  --sidebar-border: #D0E4F5;
+  --sidebar-ring: #1A6FBF;
 }
 
 .dark {
-  /* Dark mode: deep navy base with orange accent */
-  --background: #0a1628;
+  /* Dark mode: uses footer dark tones from automarketlgc.com */
+  --background: #161820;
   --foreground: #e0e6ef;
-  --card: #111d33;
+  --card: #232837;
   --card-foreground: #e0e6ef;
-  --popover: #111d33;
+  --popover: #232837;
   --popover-foreground: #e0e6ef;
-  --primary: #3a6fd8;
+  --primary: #2A86C9;
   --primary-foreground: #ffffff;
-  --secondary: #1a2a44;
+  --secondary: #1e2230;
   --secondary-foreground: #e0e6ef;
-  --muted: #1a2a44;
-  --muted-foreground: #7a8ba5;
-  --accent: #FF8533;
+  --muted: #1e2230;
+  --muted-foreground: #5A7FA0;
+  --accent: #3A9AD9;
   --accent-foreground: #ffffff;
-  --destructive: #ff6467;
-  --border: rgba(176, 190, 197, 0.15);
-  --input: rgba(176, 190, 197, 0.18);
-  --ring: #3a6fd8;
+  --destructive: #E23367;
+  --border: rgba(208, 228, 245, 0.15);
+  --input: rgba(208, 228, 245, 0.18);
+  --ring: #2A86C9;
   --success: #009c50;
   --success-foreground: #ffffff;
-  --warning: #FF8533;
+  --warning: #E23367;
   --warning-foreground: #ffffff;
-  --info: #0099e0;
+  --info: #3A9AD9;
   --info-foreground: #ffffff;
-  --chart-1: #3a6fd8;
-  --chart-2: #FF8533;
-  --chart-3: #0099e0;
+  --chart-1: #2A86C9;
+  --chart-2: #3A9AD9;
+  --chart-3: #5A7FA0;
   --chart-4: #009c50;
-  --chart-5: #7a8ba5;
-  --sidebar: #111d33;
+  --chart-5: #5A7FA0;
+  --sidebar: #232837;
   --sidebar-foreground: #e0e6ef;
-  --sidebar-primary: #3a6fd8;
+  --sidebar-primary: #2A86C9;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #FF8533;
+  --sidebar-accent: #3A9AD9;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: rgba(176, 190, 197, 0.15);
-  --sidebar-ring: #3a6fd8;
+  --sidebar-border: rgba(208, 228, 245, 0.15);
+  --sidebar-ring: #2A86C9;
 }

@@ -44,7 +44,8 @@ export const DesktopNav = (): React.ReactElement => {
   );
 
   return (
-    <nav className="bg-secondary flex justify-between items-center w-full px-8 py-4 max-w-full sticky top-0 z-50">
+    <nav className="bg-secondary w-full sticky top-0 z-50">
+      <div className="max-w-[1700px] mx-auto flex justify-between items-center px-8 py-4">
       <Link href="/" className="flex items-center">
         <Image
           src="/logo.png"
@@ -129,6 +130,7 @@ export const DesktopNav = (): React.ReactElement => {
         >
           {t.desktopNav.login}
         </button>
+      </div>
       </div>
     </nav>
   );

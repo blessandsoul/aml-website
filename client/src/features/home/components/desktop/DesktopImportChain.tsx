@@ -23,7 +23,8 @@ export const DesktopImportChain = (): React.ReactElement => {
   const { t } = useTranslation();
 
   return (
-    <section className="py-16 px-12 md:px-24 bg-background">
+    <section className="py-16 bg-background">
+      <div className="max-w-[1700px] mx-auto px-12 md:px-24">
       <div className="mb-10">
         <h2 className="text-4xl font-black uppercase tracking-tighter text-primary">
           {t.desktopImportChain.title}
@@ -65,6 +66,7 @@ export const DesktopImportChain = (): React.ReactElement => {
             </div>
           );
         })}
+      </div>
       </div>
     </section>
   );

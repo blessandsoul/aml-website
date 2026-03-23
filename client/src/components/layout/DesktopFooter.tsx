@@ -11,7 +11,8 @@ export const DesktopFooter = (): React.ReactElement => {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-secondary grid grid-cols-2 md:grid-cols-4 gap-8 px-12 py-16 w-full text-xs leading-relaxed">
+    <footer className="bg-secondary w-full py-16 text-xs leading-relaxed">
+      <div className="max-w-[1700px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 px-12">
       <div className="col-span-2 md:col-span-1">
         <div className="text-lg font-bold text-primary mb-6 uppercase">{t.header.appName}</div>
         <p className="text-muted-foreground max-w-xs">
@@ -50,6 +51,7 @@ export const DesktopFooter = (): React.ReactElement => {
         <p className="text-muted-foreground/60 text-center">
           {t.footer.copyright}
         </p>
+      </div>
       </div>
     </footer>
   );

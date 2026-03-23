@@ -36,7 +36,8 @@ export const DesktopServicesGrid = (): React.ReactElement => {
   ];
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-4 w-full border-b border-border/10">
+    <section className="w-full border-b border-border/10">
+      <div className="max-w-[1700px] mx-auto grid grid-cols-1 md:grid-cols-4">
       {services.map((service) => (
         <div
           key={service.icon}
@@ -55,6 +56,7 @@ export const DesktopServicesGrid = (): React.ReactElement => {
           </p>
         </div>
       ))}
+      </div>
     </section>
   );
 };

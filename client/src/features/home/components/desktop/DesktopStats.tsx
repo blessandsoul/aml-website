@@ -9,7 +9,8 @@ export const DesktopStats = (): React.ReactElement => {
   const { t } = useTranslation();
 
   return (
-    <section className="py-24 px-12 md:px-24 bg-secondary">
+    <section className="py-24 bg-secondary">
+      <div className="max-w-[1700px] mx-auto px-12 md:px-24">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
         <div className="md:col-span-8 bg-background p-12 flex flex-col justify-center">
           <h2 className="text-5xl font-black uppercase tracking-tighter text-primary mb-8">
@@ -55,6 +56,7 @@ export const DesktopStats = (): React.ReactElement => {
             <MaterialIcon name="language" size={300} />
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

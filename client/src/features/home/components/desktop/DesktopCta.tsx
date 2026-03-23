@@ -8,7 +8,8 @@ export const DesktopCta = (): React.ReactElement => {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-primary py-24 px-12 md:px-24 relative overflow-hidden">
+    <section className="bg-primary py-24 relative overflow-hidden">
+      <div className="max-w-[1700px] mx-auto px-12 md:px-24">
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <h2 className="text-4xl md:text-5xl font-black text-primary-foreground uppercase tracking-tighter mb-8">
           {t.desktopCta.title}
@@ -29,6 +30,7 @@ export const DesktopCta = (): React.ReactElement => {
             {t.desktopCta.button}
           </button>
         </div>
+      </div>
       </div>
       <div
         className="absolute inset-0 opacity-5 pointer-events-none"

@@ -9,15 +9,20 @@ export const DesktopHeroSection = (): React.ReactElement => {
 
   return (
     <header className="relative h-[819px] w-full overflow-hidden bg-primary">
-      <div className="absolute inset-0 opacity-40 mix-blend-overlay">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          alt="გლობალური ლოჯისტიკური ინფრასტრუქტურა"
+      <div className="absolute inset-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKNn1fjk_zxl_3GevaGlokdgtkMnfALhZIqEzKa5Yv9nOQ4lNY8nz2OjM16r-qBF03KUOJUH8wBCtkpb_GVUYEP1Un36UKI-zJNgYxFviu4QQ2PqRDLbkLJHp9LSWNAN8watBa2H1n8ejkEdt35XeuJ-1ldf2I2lABJtv3FlPlFwJRfhvOE7G9jhrcJLQW7SkhXcYZZbSYNEZtp7dNNpdUxBa55FrjjU5qFtXoAzlwar2gDMXy9fuf3RNG4DzyNuPGHgC-iOX6s3Gt"
-        />
+          aria-hidden="true"
+        >
+          <source src="/hero-bg.mp4" type="video/mp4" />
+        </video>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent flex items-center px-12 md:px-24">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent flex items-center">
+        <div className="max-w-[1700px] mx-auto w-full px-12 md:px-24">
         <div className="max-w-3xl">
           <span className="text-primary-foreground text-sm tracking-[0.3em] uppercase mb-4 block font-bold">
             {t.desktopHero.subtitle}
@@ -42,6 +47,7 @@ export const DesktopHeroSection = (): React.ReactElement => {
               {t.desktopHero.ctaSecondary}
             </button>
           </div>
+        </div>
         </div>
       </div>
     </header>
