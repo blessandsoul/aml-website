@@ -1,0 +1,16 @@
+/*
+ * Font Preset: Noto Sans Georgian + Inter + JetBrains Mono
+ * Sans/Body: Noto Sans Georgian (Georgian + Latin), Inter fallback
+ * Heading: Noto Sans Georgian (bold industrial feel)
+ * Mono: JetBrains Mono — developer-friendly with ligatures
+ *
+ * IMPORTANT: Uses `body` instead of `:root` because next/font/google
+ * sets CSS variables via classes on <body>. `:root` (<html>) can't
+ * see variables defined on its child.
+ */
+
+body {
+  --font-sans-value: var(--font-noto-sans-georgian), var(--font-inter);
+  --font-heading-value: var(--font-noto-sans-georgian), var(--font-inter);
+  --font-mono-value: var(--font-jetbrains-mono);
+}

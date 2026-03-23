@@ -1,0 +1,82 @@
+# WARNING: These credentials are for LOCAL DEVELOPMENT ONLY.
+# Change all passwords and secrets before using in any shared or production environment.
+
+name: aml-website
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: aml-website-mysql
+    restart: unless-stopped
+    ports:
+      - '${MYSQL_PORT:-3366}:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: aml_website_db
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - aml-website-network
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: aml-website-phpmyadmin
+    restart: unless-stopped
+    ports:
+      - '${PHPMYADMIN_PORT:-8140}:80'
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: rootpassword
+      PMA_ARBITRARY: 0
+      HIDE_PHP_VERSION: 'true'
+    volumes:
+      - ./phpmyadmin-config.php:/etc/phpmyadmin/config.user.inc.php
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - aml-website-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: aml-website-redis
+    restart: unless-stopped
+    ports:
+      - '${REDIS_PORT:-6439}:6379'
+    volumes:
+      - redis_data:/data
+    networks:
+      - aml-website-network
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: aml-website-redis-commander
+    restart: unless-stopped
+    ports:
+      - '${REDIS_COMMANDER_PORT:-8141}:8081'
+    environment:
+      REDIS_HOSTS: local:redis:6379
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - aml-website-network
+
+volumes:
+  mysql_data:
+  redis_data:
+
+networks:
+  aml-website-network:
+    driver: bridge

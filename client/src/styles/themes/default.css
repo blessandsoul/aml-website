@@ -1,0 +1,93 @@
+/*
+ * AML Theme — Industrial Navy + Orange
+ * Primary: Deep Navy (#002366)
+ * Accent: Industrial Orange (#FF6B00)
+ * Vibe: Bold, industrial, logistics
+ *
+ * This is the single theme file. Colors use HEX values.
+ * Light mode: :root selectors. Dark mode: .dark selectors.
+ * To customize: edit the HEX values below.
+ */
+
+:root {
+  --radius: 0px;
+  /* Clean white surface with deep navy primary and orange accent */
+  --background: #ffffff;
+  --foreground: #002366;
+  --card: #ffffff;
+  --card-foreground: #002366;
+  --popover: #ffffff;
+  --popover-foreground: #002366;
+  --primary: #002366;
+  --primary-foreground: #ffffff;
+  --secondary: #F4F7FA;
+  --secondary-foreground: #002366;
+  --muted: #F4F7FA;
+  --muted-foreground: #B0BEC5;
+  --accent: #FF6B00;
+  --accent-foreground: #ffffff;
+  --destructive: #e7000b;
+  --border: #B0BEC5;
+  --input: #B0BEC5;
+  --ring: #002366;
+  --success: #008339;
+  --success-foreground: #ffffff;
+  --warning: #FF6B00;
+  --warning-foreground: #ffffff;
+  --info: #0079bf;
+  --info-foreground: #ffffff;
+  --chart-1: #002366;
+  --chart-2: #FF6B00;
+  --chart-3: #0079bf;
+  --chart-4: #008339;
+  --chart-5: #B0BEC5;
+  --sidebar: #F4F7FA;
+  --sidebar-foreground: #002366;
+  --sidebar-primary: #002366;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #FF6B00;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #B0BEC5;
+  --sidebar-ring: #002366;
+}
+
+.dark {
+  /* Dark mode: deep navy base with orange accent */
+  --background: #0a1628;
+  --foreground: #e0e6ef;
+  --card: #111d33;
+  --card-foreground: #e0e6ef;
+  --popover: #111d33;
+  --popover-foreground: #e0e6ef;
+  --primary: #3a6fd8;
+  --primary-foreground: #ffffff;
+  --secondary: #1a2a44;
+  --secondary-foreground: #e0e6ef;
+  --muted: #1a2a44;
+  --muted-foreground: #7a8ba5;
+  --accent: #FF8533;
+  --accent-foreground: #ffffff;
+  --destructive: #ff6467;
+  --border: rgba(176, 190, 197, 0.15);
+  --input: rgba(176, 190, 197, 0.18);
+  --ring: #3a6fd8;
+  --success: #009c50;
+  --success-foreground: #ffffff;
+  --warning: #FF8533;
+  --warning-foreground: #ffffff;
+  --info: #0099e0;
+  --info-foreground: #ffffff;
+  --chart-1: #3a6fd8;
+  --chart-2: #FF8533;
+  --chart-3: #0099e0;
+  --chart-4: #009c50;
+  --chart-5: #7a8ba5;
+  --sidebar: #111d33;
+  --sidebar-foreground: #e0e6ef;
+  --sidebar-primary: #3a6fd8;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #FF8533;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(176, 190, 197, 0.15);
+  --sidebar-ring: #3a6fd8;
+}
